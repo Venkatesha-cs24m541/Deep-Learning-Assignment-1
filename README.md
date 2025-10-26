@@ -15,7 +15,7 @@ The goal is to analyze how each configuration affects accuracy — and to identi
  Clone the repository
 git clone https://github.com/Venkatesha-cs24m541/Deep-Learning-Assignment-1
 
-Running from Drive
+### Running from Drive
 1. Upload all the files to a folder in Drive
 2. %cd /content/drive/MyDrive/Semester_3/Deep_Learning/Assignment_1/
 3. !pip install torch torchvision wandb matplotlib numpy wandb
@@ -23,6 +23,13 @@ Running from Drive
 5. wandb.login()
 6. To run the wandb sweep for first time - !python run_sweep.py
 7. To continue configurations from previous sweep - !wandb agent venkatesha-cs24m541-iitm/vgg6-cifar10_1/fzu01va9 --count 7
+
+### Running Directly
+1. pip install torch torchvision wandb matplotlib numpy wandb
+2. python
+3. import wandb
+4. wandb.login()
+5. python run_sweep.py
 
 ---
  ## File Structure
@@ -32,7 +39,7 @@ Running from Drive
  ┣ run_sweep.py # Launches automated experiments <br>
  ┣ README.md # This documentation <br>
  ┣ best_model.pth # Saved best model (after training) <br>
- ┗ data/ # Automatically downloaded CIFAR-10 dataset <br>
+ ┗ Plots/ # The report plots <br>
 
 ---
 ## Running the Baseline Experiment
