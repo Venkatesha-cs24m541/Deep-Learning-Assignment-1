@@ -15,13 +15,14 @@ The goal is to analyze how each configuration affects accuracy — and to identi
  Clone the repository
 git clone https://github.com/Venkatesha-cs24m541/Deep-Learning-Assignment-1
 
-python -m venv venvsource venv/bin/activate # Linux/Macvenv\Scripts\activate # Windows
- Install dependencies
-pip install -r requirements.txt
-If requirements.txt is not present, install manually:
-pip install torch torchvision wandb matplotlib numpy
- Login to Weights & Biases
-wandb login
+Running from Drive
+1. Upload all the files to a folder in Drive
+2. %cd /content/drive/MyDrive/Semester_3/Deep_Learning/Assignment_1/
+3. !pip install torch torchvision wandb matplotlib numpy wandb
+4. import wandb
+5. wandb.login()
+6. To run the wandb sweep for first time - !python run_sweep.py
+7. To continue configurations from previous sweep - !wandb agent venkatesha-cs24m541-iitm/vgg6-cifar10_1/fzu01va9 --count 7
 
 ---
  ## File Structure
