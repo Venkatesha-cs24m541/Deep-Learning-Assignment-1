@@ -1,16 +1,16 @@
 # Deep-Learning-Assignment-1
 ---
-#CS6886W — System Engineering for Deep Learning
+ CS6886W — System Engineering for Deep Learning
 Assignment 1: VGG6 on CIFAR-10
 Department of Computer Science and Engineering, IIT Madras
 
 ---
-#Overview
+## Overview
 This repository implements VGG6 on the CIFAR-10 dataset to explore model performance under different configurations.Experiments include varying activation functions, optimizers, batch sizes, and learning rates, using Weights & Biases (W&B) for logging and visualization.
 The goal is to analyze how each configuration affects convergence speed, stability, and accuracy — and to identify the best-performing setup.
 
 ---
-#Environment Setup
+## Environment Setup
  Clone the repository
 git clone https://github.com/<your-username>/vgg6-cifar10-experiments.gitcd vgg6-cifar10-experiments
  Create a virtual environment (optional but recommended)
@@ -23,7 +23,7 @@ pip install torch torchvision wandb matplotlib numpy
 wandb login
 
 ---
- File Structure
+ ## File Structure
  vgg6-cifar10-experiments ┣ train_vgg6.py # Core training script ┣ sweep.yaml # W&B sweep configuration ┣ run_sweep.py # Launches automated experiments ┣ README.md # This documentation ┣ requirements.txt # Environment dependencies ┣ best_model.pth # Saved best model (after training) ┗ data/ # Automatically downloaded CIFAR-10 dataset
 
 ---
