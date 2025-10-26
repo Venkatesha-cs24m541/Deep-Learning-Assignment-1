@@ -1,0 +1,37 @@
+program: train_vgg6.py
+method: bayes # you can change to 'grid' or 'random'
+metric:
+  name: val_acc
+  goal: maximize
+
+parameters:
+  activation:
+    values: ["ReLU", "Sigmoid", "Tanh", "SiLU", "GELU"]
+
+  optimizer:
+    values: ["SGD", "Nesterov-SGD", "Adam", "Adagrad", "RMSprop", "Nadam"]
+
+  lr:
+    values: [0.01, 0.001, 0.0001]
+
+  batch_size:
+    values: [64, 128, 256]
+
+  batch_norm:
+    values: [true, false]
+
+  use_cutout:
+    values: [true, false]
+
+  epochs:
+    value: 50
+
+  weight_decay:
+    values: [0.0, 0.0005]
+
+  autoaugment:
+    value: false # set true if you want to include CIFAR10Policy in experiments
+
+  seed:
+    value: 42
+
