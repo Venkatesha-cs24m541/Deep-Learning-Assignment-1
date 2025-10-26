@@ -26,13 +26,13 @@ Running from Drive
 
 ---
  ## File Structure
- vgg6-cifar10-experiments 
+ vgg6-cifar10-experiments <br>
  ┣ train_vgg6.py # Core training script <br> 
- ┣ sweep.yaml # W&B sweep configuration   
- ┣ run_sweep.py # Launches automated experiments  
- ┣ README.md # This documentation 
- ┣ best_model.pth # Saved best model (after training) 
- ┗ data/ # Automatically downloaded CIFAR-10 dataset
+ ┣ sweep.yaml # W&B sweep configuration <br>  
+ ┣ run_sweep.py # Launches automated experiments <br>  
+ ┣ README.md # This documentation <br>
+ ┣ best_model.pth # Saved best model (after training) <br>
+ ┗ data/ # Automatically downloaded CIFAR-10 dataset <br>
 
 ---
 ## Running the Baseline Experiment
