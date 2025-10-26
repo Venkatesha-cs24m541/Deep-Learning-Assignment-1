@@ -1,4 +1,4 @@
-"Name","State","Runtime","activation","autoaugment","batch_norm","batch_size","epochs","lr","optimizer","seed","use_cutout","weight_decay","epoch","epoch_time_sec","train_acc","train_loss","val_acc","val_loss"
+"Name","State","Runtime (Seconds)","activation","autoaugment","batch_norm","batch_size","epochs","lr","optimizer","seed","use_cutout","weight_decay","epoch","epoch_time_sec","train_acc","train_loss","val_acc","val_loss"
 "jolly-sweep-111","finished","1602","GELU","true","true","128","50","0.0001","Nadam","42","false","0","50","31.704630136489868","61.214","1.1101718552582098","70.79","1.0067824543535708"
 "gallant-sweep-110","finished","2573","GELU","true","true","128","80","0.0001","Nadam","42","false","0","80","31.363964557647705","64.444","1.0210647486969635","75.72","1.0056508083969355"
 "ethereal-sweep-109","finished","2492","GELU","false","false","256","80","0.0001","Nadam","42","true","0","80","30.572468280792236","62.244","1.0826377287811162","72.92","1.0031308489561082"
