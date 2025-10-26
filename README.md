@@ -1,8 +1,8 @@
 # Deep-Learning-Assignment-1
 ---
- CS6886W — System Engineering for Deep Learning
-Assignment 1: VGG6 on CIFAR-10
-Department of Computer Science and Engineering, IIT Madras
+### CS6886W — System Engineering for Deep Learning
+### Assignment 1: VGG6 on CIFAR-10
+### Department of Computer Science and Engineering, IIT Madras
 
 ---
 ## Overview
