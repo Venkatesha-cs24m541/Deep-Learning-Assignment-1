@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
 Improved VGG6 training script for CIFAR-10
-Combines W&B-friendly training loop with the VGG implementation, initialization,
-and augmentation (Cutout / AutoAugment policy) from the provided colab copy.
+Combined W&B-friendly training loop with the VGG implementation, initialization,
+and augmentation (Cutout / AutoAugment policy).
 
 Usage example:
   wandb login
@@ -40,7 +40,7 @@ def set_seed(seed=42):
     torch.backends.cudnn.benchmark = False
 
 # ----------------------------
-# Cutout and AutoAugment classes (copied/adapted from your colab copy)
+# Cutout and AutoAugment classes
 # ----------------------------
 class Cutout(object):
     """Randomly mask out one or more patches from an image.
@@ -266,7 +266,7 @@ class CIFAR10Policy(object):
         return "AutoAugment CIFAR10 Policy"
 
 # ----------------------------
-# VGG builder (make_layers) and VGG class with weight init (from copy_of_vgg6.py)
+# VGG builder (make_layers) and VGG class with weight init
 # ----------------------------
 class VGG(nn.Module):
     def __init__(self, features: nn.Sequential, num_classes: int = 10):
@@ -288,7 +288,7 @@ class VGG(nn.Module):
     def _initialize_weights(self):
         for m in self.modules():
             if isinstance(m, nn.Conv2d):
-                # kaiming normal (as in the colab copy)
+                # kaiming normal
                 n = m.kernel_size[0] * m.kernel_size[1] * m.out_channels
                 m.weight.data.normal_(0, math.sqrt(2. / n))
                 if m.bias is not None:
@@ -326,7 +326,7 @@ def vgg(cfg, num_classes=10, batch_norm=True, activation=nn.ReLU):
 # CIFAR-10 dataset loader helper
 # ----------------------------
 def get_cifar10_loaders(batch_size: int, use_cutout: bool = True, num_workers: int = 2, autoaugment: bool = False):
-    # CIFAR mean/std (colab copy uses std ~ 0.2023 etc)
+    # CIFAR mean/std
     mean = (0.4914, 0.4822, 0.4465)
     std = (0.2023, 0.1994, 0.2010)
 
@@ -537,4 +537,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
